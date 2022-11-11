@@ -25,7 +25,7 @@ def model_fn(model_dir):
     dir_contents = os.listdir(model_dir)
     model_path = next(filter(lambda item: 'model' in item, dir_contents), None)
     
-    tokenizer_init = AutoTokenizer.from_pretrained('distilbert-base-uncased')
+    tokenizer_init = AutoTokenizer.from_pretrained('distilbert-base-uncased', max_length=128)
     model = torch.jit.load(os.path.join(model_dir, model_path))
 
     
