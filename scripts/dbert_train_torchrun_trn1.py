@@ -42,11 +42,11 @@ num_epochs = 3
 def main():
 
     dataset = load_from_disk(os.environ["SM_CHANNEL_TRAIN"])
-    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased", max_length = 128)
     
     # tokenizer helper function
     def tokenize(batch):
-        return tokenizer(batch['text'], padding='max_length', truncation=True)
+        return tokenizer(batch['text'], max_length = 128, padding='max_length', truncation=True)
 
     
     # load dataset

@@ -45,7 +45,7 @@ def predict_fn(input_data, models):
 
     model_bert, tokenizer = models
     
-    max_length = 512
+    max_length = 128 
     tokenized_sequence_pair = tokenizer.encode_plus(input_data,
                                                     max_length=max_length,
                                                     padding='max_length',
