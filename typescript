@@ -81,4 +81,51 @@ Shutdown this notebook server (y/[n])? y
 [32m[I 22:04:21.941 NotebookApp](B[m Shutting down 1 kernel
 [32m[I 22:04:22.045 NotebookApp](B[m Kernel shutdown: 637817b4-8fdf-4d69-b659-72d03cd29024
 [32m[I 22:04:22.046 NotebookApp](B[m Shutting down 0 terminals
-[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004hjupyter notebook[16Dcd ../          [10D
+[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004hjupyter notebook[16Dcd ../          [10Djupyter notebook[16Dgit push --set-upstream origin main[31Dcommit -m 'transformer 4.17.0 for training'[43Dadd .                                      [38D[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004hgit add .[9Djupyter notebook[16Dcd ../          [10Djupyter notebook[16Dgit push --set-upstream origin main[31Dcommit -m 'transformer 4.17.0 for training'' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' 2'1'.'3' 'f'o'r' 't'r'a'i'n'i'n'g'[?2004l
+[main e120a34] transformer 4.21.3 for training
+ 3 files changed, 86 insertions(+), 2 deletions(-)
+ create mode 100644 typescript
+[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004hgit commit -m 'transformer 4.21.3 for training'[43Dadd .                                      [38D[9Djupyter notebook[16Dcd ../          [10Djupyter notebook[16Dgit push --set-upstream origin main[?2004l
+Enumerating objects: 8, done.
+Counting objects:  12% (1/8)Counting objects:  25% (2/8)Counting objects:  37% (3/8)Counting objects:  50% (4/8)Counting objects:  62% (5/8)Counting objects:  75% (6/8)Counting objects:  87% (7/8)Counting objects: 100% (8/8)Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects:  20% (1/5)Compressing objects:  40% (2/5)Compressing objects:  60% (3/5)Compressing objects:  80% (4/5)Compressing objects: 100% (5/5)Compressing objects: 100% (5/5), done.
+Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3/5)Writing objects:  80% (4/5)Writing objects: 100% (5/5)Writing objects: 100% (5/5), 2.48 KiB | 2.48 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/aws-samples/sagemaker-trainium-inferentia.git
+   73fea7a..e120a34  main -> main
+branch 'main' set up to track 'origin/main'.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004hgit push --set-upstream origin main[35D                                   [35Dgit push --set-upstream origin main[31Dcommit -m 'transformer 4.21.3 for training'[43Dadd .                                      [38D[9Djupyter notebook[?2004l
+[32m[I 22:05:13.432 NotebookApp](B[m The port 8888 is already in use, trying another port.
+[32m[I 22:05:13.432 NotebookApp](B[m The port 8889 is already in use, trying another port.
+[32m[I 22:05:13.433 NotebookApp](B[m Serving notebooks from local directory: /Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia
+[32m[I 22:05:13.433 NotebookApp](B[m Jupyter Notebook 6.4.2 is running at:
+[32m[I 22:05:13.433 NotebookApp](B[m http://localhost:8890/?token=8a5cbb3d910f97677aecfc47d38ce137d383bab8552984ed
+[32m[I 22:05:13.433 NotebookApp](B[m  or http://127.0.0.1:8890/?token=8a5cbb3d910f97677aecfc47d38ce137d383bab8552984ed
+[32m[I 22:05:13.433 NotebookApp](B[m Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[35m[C 22:05:13.435 NotebookApp](B[m 
+    
+    To access the notebook, open this file in a browser:
+        file:///Users/kctung/Library/Jupyter/runtime/nbserver-58552-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8890/?token=8a5cbb3d910f97677aecfc47d38ce137d383bab8552984ed
+     or http://127.0.0.1:8890/?token=8a5cbb3d910f97677aecfc47d38ce137d383bab8552984ed
+[32m[I 22:05:19.448 NotebookApp](B[m Kernel started: 319aa8c0-c93c-43e0-9611-39bcdf3a990a, name: python3
+[32m[I 22:07:02.534 NotebookApp](B[m Saving file at /HFDbertdemo.ipynb
+^C[32m[I 22:07:14.985 NotebookApp](B[m interrupted
+Serving notebooks from local directory: /Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia
+1 active kernel
+Jupyter Notebook 6.4.2 is running at:
+http://localhost:8890/?token=8a5cbb3d910f97677aecfc47d38ce137d383bab8552984ed
+ or http://127.0.0.1:8890/?token=8a5cbb3d910f97677aecfc47d38ce137d383bab8552984ed
+Shutdown this notebook server (y/[n])? y
+[35m[C 22:07:16.504 NotebookApp](B[m Shutdown confirmed
+[32m[I 22:07:16.506 NotebookApp](B[m Shutting down 1 kernel
+[32m[I 22:07:16.613 NotebookApp](B[m Kernel shutdown: 319aa8c0-c93c-43e0-9611-39bcdf3a990a
+[32m[I 22:07:16.614 NotebookApp](B[m Shutting down 0 terminals
+[1m[7m%[27m[1m[0m                                                                                                                                                                                      ]7;file://a078179828b5.ant.amazon.com/Users/kctung/Documents/reinvent22/workshop/sagemaker-trn1-inf1-workshop/my-aws-samples-repo/update2/sagemaker-trainium-inferentia[0m[27m[24m[Jkctung@a078179828b5 sagemaker-trainium-inferentia % [K[?2004h
