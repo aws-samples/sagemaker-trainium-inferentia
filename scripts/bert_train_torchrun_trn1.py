@@ -10,7 +10,7 @@
 # distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
 # ANY KIND, either express or implied. See the License for the specific
 # language governing permissions and limitations under the License.
-
+         
 import logging
 import sys
 import argparse
@@ -38,20 +38,19 @@ WARMUP_STEPS = 2
 batch_size = 8
 num_epochs = 3
 
-
 def main():
 
     dataset = load_from_disk(os.environ["SM_CHANNEL_TRAIN"])
-    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased", max_length = 128)
+    tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+#    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
     
     # tokenizer helper function
     def tokenize(batch):
-        return tokenizer(batch['text'], max_length = 128, padding='max_length', truncation=True)
-
+        return tokenizer(batch['text'], max_length=128, padding='max_length', truncation=True)
+#        return tokenizer(batch['text'], padding='max_length', truncation=True)
     
     # load dataset
     train_dataset = dataset['train'].shuffle().select(range(1000)) # smaller for faster training demo
-
 
     # tokenize dataset
     train_dataset = train_dataset.map(tokenize, batched=True)
@@ -81,7 +80,8 @@ def main():
     num_training_steps = num_epochs * len(train_device_loader)
     progress_bar = tqdm(range(num_training_steps))
 
-    model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-uncased")
+    model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased")
+#    model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-uncased")
     model.to(device)
     optimizer = AdamW(model.parameters(), lr=5e-5)
     model.train() 
@@ -99,9 +99,6 @@ def main():
         )
     os.system(f"df -k") # check directory space
 
-    
-
-
     # Save checkpoint for evaluation (xm.save ensures only one process save)
     os.makedirs("checkpoints", exist_ok=True)
     checkpoint = {'state_dict': model.state_dict()}
@@ -110,6 +107,6 @@ def main():
     xm.save(checkpoint, f"{default_dir}/checkpoint.pt")
     print('##### Model saved to: ', f"{default_dir}/checkpoint.pt")
     print('----------End Training ---------------')
-
+    
 if __name__ == '__main__':
     main()

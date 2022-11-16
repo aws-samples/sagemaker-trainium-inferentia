@@ -25,12 +25,12 @@ def model_fn(model_dir):
     dir_contents = os.listdir(model_dir)
     model_path = next(filter(lambda item: 'model' in item, dir_contents), None)
     
-    tokenizer_init = AutoTokenizer.from_pretrained('distilbert-base-uncased', max_length=128)
+    tokenizer_init = AutoTokenizer.from_pretrained('bert-base-uncased')
+#    tokenizer_init = AutoTokenizer.from_pretrained('distilbert-base-uncased')
     model = torch.jit.load(os.path.join(model_dir, model_path))
 
     
     return (model, tokenizer_init)
-
 
 def input_fn(serialized_input_data, content_type=JSON_CONTENT_TYPE):
     if content_type == JSON_CONTENT_TYPE:
@@ -40,12 +40,11 @@ def input_fn(serialized_input_data, content_type=JSON_CONTENT_TYPE):
         raise Exception('Requested unsupported ContentType in Accept: ' + content_type)
         return
     
-
 def predict_fn(input_data, models):
-
     model_bert, tokenizer = models
     
-    max_length = 128 
+    max_length = 128
+#    max_length = 512
     tokenized_sequence_pair = tokenizer.encode_plus(input_data,
                                                     max_length=max_length,
                                                     padding='max_length',
@@ -58,16 +57,17 @@ def predict_fn(input_data, models):
     with torch.no_grad():
         paraphrase_classification_logits_neuron = model_bert(*example_inputs)
     
+    print("input_data ==", input_data)
+    print("predict result==", paraphrase_classification_logits_neuron)
+    
     classes = ['negative', 'positive']
     paraphrase_prediction = paraphrase_classification_logits_neuron[0][0].argmax().item()
-    out_str = 'BERT predicts that "{}" is {}'.format(input_data, classes[paraphrase_prediction])
+    out_str = 'OUTPUT LOGITS: {}, BERT predicts that "{}" is {}'.format(paraphrase_classification_logits_neuron, input_data, classes[paraphrase_prediction])
     
     return out_str
-
 
 def output_fn(prediction_output, accept=JSON_CONTENT_TYPE):
     if accept == JSON_CONTENT_TYPE:
         return json.dumps(prediction_output), accept
     
     raise Exception('Requested unsupported ContentType in Accept: ' + accept)
-    
