@@ -6,7 +6,7 @@ of model training and inferencing. Both Trainium and Inferentia processors are d
 
 ## Getting started
 
-Clone this repo in your SageMaker instance, and then start with [this notebook](HFDbertdemo.ipynb) to learn how to use SageMaker to leverage these AWS processors.
+Clone this repo in your SageMaker instance, and then start with [this notebook](HFbertdemo.ipynb) to learn how to use SageMaker to leverage these AWS processors.
 
 
 ## License
